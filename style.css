@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;800&family=Itim&family=League+Spartan:wght@500;700&display=swap');
+:root{
+    --hd-clr:hsl(180, 29%, 50%);
+    --bg-clr:hsl(180, 52%, 96%);
+    --item-bg-clr:hsl(180, 31%, 95%);
+    --txt-clr:hsl(180, 8%, 52%);
+    --A:hsl(180, 14%, 20%);
+}
+/* *General*/
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-clr);
+    font-family: 'League Spartan',sans-serif;
+}
+/* *Header*/
+header{
+    background-color: var(--hd-clr);
+}
+header img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* *Main*/
+main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+}
+main .item img{
+    max-width:50px;
+    position: absolute;
+    top: -1.5rem;
+}
+main .item{
+    position: relative;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow:0px 3px 8px var(--hd-clr);
+    border-left: 5px solid var(--hd-clr) ;
+    border-radius: .25rem;
+}
+main div h5{
+    color:var(--hd-clr);
+}
+main div h5 span{
+    background-color: var(--hd-clr);
+    color: #fff;
+    padding: .33rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+main .item p{
+    color: var(--txt-clr);
+
+}
+main div .icons button{
+    font: inherit;
+    font-weight: 800;
+    color: var(--hd-clr);
+    background-color: var(--item-bg-clr);
+    margin: .33rem;
+    padding: .5rem;
+    border: 0px solid;
+    border-radius: .25rem;
+}
+main div .icons button:hover{
+    filter: brightness(1.1);
+}
+/* *Footer*/
+footer{
+    text-align: center;
+    padding: 1.5rem;
+}
+footer a{
+    color: var(--hd-clr);
+    text-decoration: none;
+}
+/* *Desktop*/
+@media (min-width: 769px){
+    main{
+        margin: 2rem;
+    }
+    main .item{
+        display: flex;
+        column-gap: 2rem;
+    }
+    main .item img{
+        padding: 1rem;
+        position: static;
+        max-width: 100%;
+    }
+    main .item .icons{
+        align-self: center;
+    }
+    hr{
+        display: none;
+    }
+}
